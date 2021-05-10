@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   data:any
-  baseUrl = "http://localhost:3000/join"
+  //baseUrl = "http://localhost:3000/join"
+  baseUrl = "https://tourmaline-cream-forgery.glitch.me/join"
   isSubmitted = false
   isError = false
   isLoading = false
