@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+  data:any
+  baseUrl = "http://localhost:3000/join"
+  isSubmitted = false
+  isError = false
+  isLoading = false
+  async onJoin(data:any){
+    this.isLoading = true
+    await this.http.post(this.baseUrl, data).toPromise().then((data)=>{
+      if(Object(data).status == true){
+        this.isSubmitted = true;
+      }
+      else{
+        this.isError = true
+      }
+    }).catch((err)=>{
+      this.isError = true
+    })
+    this.isLoading = false
+  }
 
-  onJoin(data:any){
-
+  toggler(){
+    this.isSubmitted  = false
+    this.isError = false
   }
 
   ngOnInit(): void {
