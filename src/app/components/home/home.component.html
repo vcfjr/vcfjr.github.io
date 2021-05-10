@@ -1,0 +1,61 @@
+<section class="section" id="joinpage">
+  <div class="container is-hidden-mobile">
+    <div class="columns is-centered">
+      <div class="column is-7-desktop is-9-tablet is-12-mobile notification px-6 py-6">
+        <p class="title has-text-centered">Join US</p>
+        <form #joinForm="ngForm" (ngSubmit)="onJoin(joinForm.value)">
+          <div class="field py-3">
+            <p class="control has-icons-left">
+              <input type="text" name="name" id="input-text" placeholder="Full Name"
+                class="input is-warning is-large is-medium-mobile is-rounded">
+              <span class="icon is-large is-left"><i class="fa fa-user" id="input-span1" aria-hidden="true"></i></span>
+            </p>
+          </div>
+          <div class="field py-3">
+            <p class="control has-icons-left">
+              <input type="email" class="input  is-warning is-large is-rounded" id="input-text" placeholder="Email">
+              <span class="icon is-small is-left" id="input-span">
+                <i class="fa fa-envelope" id="input-span2" aria-hidden="true"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field has-text-centered py-3">
+            <p class="control has-icons-left">
+              <button role="button" type="submit" class="button is-success is-large is-rounded" id="joinbtn">Request To
+                Join</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container is-hidden-tablet is-hidden-desktop is-hidden-widescreen is-hidden-laptop">
+    <div class="columns is-centered">
+      <div class="column is-7-desktop is-9-tablet is-12-mobile notification box py-6 px-3">
+        <p class="title has-text-centered">Join US</p>
+        <form action="">
+          <div class="field py-3">
+            <p class="control has-icons-left">
+              <input type="text" name="name" placeholder="Full Name"
+                class="input is-warning is-large is-medium-mobile is-rounded">
+              <span class="icon is-large is-left"><i class="fa fa-user" aria-hidden="true"></i></span>
+            </p>
+          </div>
+          <div class="field py-3">
+            <p class="control has-icons-left">
+              <input type="email" class="input is-warning is-large is-rounded" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field has-text-centered py-3">
+            <p class="control has-icons-left">
+              <button role="button" type="submit" class="button is-success is-large is-rounded">Request To Join</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

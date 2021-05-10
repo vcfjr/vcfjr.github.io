@@ -1,0 +1,57 @@
+#joinbtn {
+  box-shadow: 0px 10px 20px #969696;
+  transition: 0.2s;
+}
+
+#joinbtn:hover {
+  box-shadow: 0px 20px 40px #afafaf;
+  transform: scale(1.2);
+}
+
+#joinbtn:active {
+  box-shadow: 0px 5px 10px #5c5c5c;
+  transform: scale(0.8);
+}
+
+@keyframes comin {
+  0% {
+    animation-delay: 1s;
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+#joinpage {
+  /* This section calls the slideInFromLeft animation we defined above */
+
+  animation: ease 1s comin;
+
+}
+
+#input-span1 {
+  color: rgb(255, 166, 32);
+}
+
+#input-span2 {
+  color: rgb(255, 166, 32);
+}
+
+#input-text {
+  color: gray;
+}
+
+
+/* #input-text:focus > #input-span{
+   opacity: 0%;
+}
+ 
+ #input-span{
+     opacity: 0%;
+    transition:0.3s;
+ }
+
+   */
