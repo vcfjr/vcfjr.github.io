@@ -58,7 +58,7 @@
           </div>
           <div class="field has-text-centered py-3">
             <p class="control">
-              <button type="submit" class="button is-success is-large is-rounded" id="joinbtn" [ngClass]="{'is-active': isLoading}">Request To
+              <button type="submit" class="button is-success is-large is-rounded" id="joinbtn" [ngClass]="{'is-loading': isLoading}">Request To
                 Join</button>
             </p>
           </div>
@@ -88,14 +88,14 @@
           </div>
           <div class="field has-text-centered py-3">
             <p class="control has-icons-left">
-              <button type="submit" class="button is-success is-large is-rounded" [ngClass]="{'is-active': isLoading}" >Request To Join</button>
+              <button type="submit" class="button is-success is-large is-rounded" [ngClass]="{'is-loading': isLoading}" >Request To Join</button>
             </p>
           </div>
         </form>
       </div>
     </div> 
-
-    <div class="modal" [ngClass]="{ 'is-active' : isSubmitted}">
+  </div>
+    <!-- <div class="modal" [ngClass]="{ 'is-active' : }">
       <div class="modal-background" (click)="toggler()"></div>
       <div class="modal-card">
         <header class="modal-card-head has-background-success">
@@ -111,7 +111,25 @@
         </footer>
       </div>
     </div>
+  </div> -->
+
+  <div class="modal" [ngClass]="{ 'is-active' : isSubmitted}">
+    <div class="modal-background" (click)="toggler()"></div>
+    <div class="modal-card">
+      <header class="modal-card-head has-background-success">
+        <p class="modal-card-title has-text-white">Success</p>
+        <button class="delete" aria-label="close" (click)="toggler()"></button>
+      </header>
+      <section class="modal-card-body">
+        Request Sent
+      </section>
+      <footer class="modal-card-foot has-text-centered">
+        <a class="button is-success is-rounded is-medium" [routerLink]="['/about']">Know About US</a>
+        <a class="button is-rounded is-medium" (click)="toggler()">Cancel</a>
+      </footer>
+    </div>
   </div>
+
 
   <div class="modal" [ngClass]="{ 'is-active' : isError}">
     <div class="modal-background" (click)="toggler()"></div>
